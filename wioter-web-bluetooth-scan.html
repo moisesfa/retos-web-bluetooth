@@ -5,6 +5,25 @@
         <h1>Web Bluetooth Wio Terminal Scan</h1>
     </head>
     <body>
+        <h3>Filter</h3>
+        <form>
+            <label for="allDevices">All Devices</label>
+            <input id="allDevices" type="checkbox">
+            <input id="service" type="text" size=47 list="services" placeholder="Bluetooth Service">
+            <input id="namePrefix" type="text" size=17 placeholder="Device Name Prefix">
+            <button>Get Bluetooth Device Info</button>
+        </form>
+        <datalist id="services">
+            <option value="battery_service">battery_service</option>
+            <option value="current_time">current_time</option>
+            <option value="heart_rate">heart_rate</option>
+          </datalist>    
+
+        <h3>Live Output</h3>
+        <div id="output" class="output">
+            <pre id="log"></pre>
+        </div>
+
         <script src="assets-scan/app.js"></script>
     </body>
 </html>
