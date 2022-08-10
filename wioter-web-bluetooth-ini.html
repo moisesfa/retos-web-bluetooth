@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluetooth</title>
+    <link rel="icon" href="./assets-ini/">
+    <link rel="stylesheet" href="./assets-ini/app.css">
+
+</head>
+
+<body>
+    <img class="pageIcon" src="./assets-ini/icon.png">
+    <h1>Web Bluetooth</h1>
+
+    <h3>Filtros de busqueda</h3>
+    <div>
+        <form>
+            <label class="container">Busqueda de todos los dipositivos
+                <input id="allDevices" type="checkbox" checked="checked">                
+            </label>
+            <p></p>
+            <label for="fname">Busqueda por nombre, empieza por</label>
+            <input id="namePrefix" type="text" placeholder="Device Name Prefix">
+            <label for="service">Busqueda por servicios </label>
+            <input id="service" type="text" list="services" placeholder="Bluetooth Service">
+            <datalist id="services">
+                <option value="alert_notification">alert_notification</option>
+                <option value="automation_io">automation_io</option>
+                <option value="battery_service">battery_service</option>
+            </datalist>
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
+    <h3>Registro</h3>
+    <div id="output" class="output">
+        <div id="status"></div>
+        <pre id="log"></pre>
+    </div>
+    <script src="./assets-ini/app.js"></script>
+
+</body>
+
+</html>
