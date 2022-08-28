@@ -6,3 +6,7 @@ Reto inicial para buscar dispositivos bluetooth cercanos por nombre o servicio.
 
 ## [Plantilla](https://moisesfa.github.io/retos-web-bluetooth/web-bluetooth-plantilla.html)
 Plantilla sin código Javascript para empezar los retos.
+
+## [LYWSD03MMC](https://moisesfa.github.io/retos-web-bluetooth/web-bluetooth-lywsd03mmc.html)
+Reto que permite leer los datos del sensor de temperatura-humedad de xiaomi LYWSD03MMC.
+
