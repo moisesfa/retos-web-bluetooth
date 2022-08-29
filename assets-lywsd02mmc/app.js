@@ -5,7 +5,6 @@ let bluetoothDevice;
 
 const temDatos = document.querySelector('#temD');
 const humDatos = document.querySelector('#humD');
-const batDatos = document.querySelector('#batD');
 
 window.addEventListener('error', function(error) {
 
@@ -124,7 +123,7 @@ function onStartButtonClick() {
     navigator.bluetooth.requestDevice({
         //acceptAllDevices: true,
         optionalServices: ['ebe0ccb0-7a0a-4b0c-8a1a-6ff2997da3a6'], 
-        filters: [{namePrefix: ["LYWSD03"]}]
+        filters: [{namePrefix: ["LYWSD02"]}]
     })
     .then(device => {
         bluetoothDevice = device;
@@ -192,17 +191,13 @@ function handleNotifications(event) {
 
     let temp = value.getInt16(0, true) / 100;
     let hum = value.getUint8(2);
-    let vbat = value.getUint16(3,true);
-    let TemHumBatString = "Temp: " + temp + "°C, Humi: " + hum + "%, "+vbat+" mV";
+    let TemHumString = "Temp: " + temp + "°C, Humi: " + hum + "%";
     let temString = "Tem: "+ temp + " ºC";
     let humString = "Hum: "+ hum + " %";
-    let batString = "Bat: "+ vbat + " mV";
 
     appHtml.temUpdate(temString)
     appHtml.humUpdate(humString)
-    appHtml.batUpdate(batString)
-    appHtml.log(TemHumBatString);
-
+    appHtml.log(TemHumString);
 
   }
 
